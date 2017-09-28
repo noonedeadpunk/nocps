@@ -13,8 +13,6 @@ class NocPS:
         self.server = ServerProxy("{proto}://{user}:{pwd}@{srv}/xmlrpc.php".format(
             proto=proto, user=user, pwd=password, srv=server))
 
-
-
     def __getattr__(self, name, *args):
         def function(*args):
             """
